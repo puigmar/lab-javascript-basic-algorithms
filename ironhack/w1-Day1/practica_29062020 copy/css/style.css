@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(0, 209, 174, 0.3);
+}
+
+.div1{
+    width: 400px;
+    height: 200px;
+    border: 1px solid #00D1AE;
+}
+
+.div2{
+    width: 100px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.color1{
+    color: steelblue;
+}
+
+.color2{
+    color: rgb(70, 130, 180);
+}
+
+.color3{
+    color: rgb(0, 128, 128, 0.5);
+}

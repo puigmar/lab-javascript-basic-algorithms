@@ -1,0 +1,95 @@
+/*const langs = ["es", "fr", "en"];
+
+let lang = langs[Math.floor(Math.random() * 3)];
+
+if (lang === "es") {
+  console.log("Hola Mundo!");
+} else if (lang === "fr") {
+  console.log("Bonjor tout le monde");
+} else {
+  console.log("¡Hello, world!");
+}
+
+switch (lang) {
+  case "es":
+    console.log("Hola Mundo!");
+    break;
+  case "fr":
+    console.log("Bonjor tout le monde");
+    break;
+  default:
+    console.log("¡Hello, world!");
+    break;
+}*/
+
+//////////////////////////////////////////////////
+
+/*let i = 0;
+while (i <= 30) {
+  console.log(i);
+  i++;
+}
+
+console.log("// Versión for //////////////////////////////////");
+
+for (let i = 0; i <= 30; i++) {
+  switch (i) {
+    case 10:
+      console.log("diez");
+      break;
+    case 20:
+      console.log("veinte");
+      break;
+    default:
+      console.log(i);
+      break;
+  }
+}
+
+console.log("//  Versión while //////////////////////////////////");
+
+let j = 0;
+
+while (j <= 30) {
+  switch (j) {
+    case 10:
+      console.log("diez");
+      break;
+    case 20:
+      console.log("veinte");
+      break;
+    default:
+      console.log(j);
+      break;
+  }
+  j++;
+}*/
+
+let i = 0;
+while (i < 20) {
+  /*
+  if (i % 2 === 0) {
+    console.log(`${i} es par`);
+  } else if (i % 3 === 0) {
+    console.log(`${i} es impar`);
+  } else {
+    console.log(`${i}`);
+  }
+  */
+
+  switch (i % 2) {
+    case 0:
+      console.log(`${i} es par`);
+      break;
+    case 1:
+      console.log(`${i} es impar`);
+      break;
+    default:
+      console.log(`${i}`);
+  }
+  i++;
+}
+
+let names = ["Ferran", "Marianna"];
+
+console.log(names.length);
