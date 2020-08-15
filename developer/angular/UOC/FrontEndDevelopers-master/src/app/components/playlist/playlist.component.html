@@ -1,0 +1,40 @@
+<div class="playList">
+    <div class="playList__body">
+        <div class="playList__songs">
+            <div class="playList__songs__header">
+                <h2>My Playlist</h2>
+                <button mat-raised-button color="primary" (click)="openDialog()">Añadir canción</button>
+            </div>
+            <app-search [songs]="songs" (filter)="searchByName($event)"></app-search>
+            <div class="wrapper-songs">
+                <mat-list class="songs">
+                    <mat-list-item
+                        *ngFor="let song of songs | async | search:filterSongs"
+                        class="song" [class.selected]="song === selectedSong"
+                        (click)="onSelect(song)"
+                        id="{{song.songId}}">
+                        <div (click)="onPlay(song)" class="song__cover" [ngStyle]="{ 'background-image': 'url(assets/img/'+song.cover+')'}">
+                            <mat-icon *ngIf="song != playedSong" aria-hidden="false" aria-label="play song">play_arrow</mat-icon>
+                        </div>
+                        <div class="song__info">
+                            <div class="song__info__left">
+                                <h3 class="song__info__title" matLine>{{song.title}}</h3>
+                                <div class="song__info__author" matLine>{{song.author}}</div>
+                            </div>
+                            <div class="song__info__right">
+                                <div class="song__info__style" matLine>{{song.style}}</div>
+                                <div class="song__info__duration" matLine>{{song.duration}}</div>
+                            </div>
+                        </div>
+                    </mat-list-item>
+
+
+                </mat-list>
+            </div>
+        </div>
+        <div class="playList__songs__details">
+            <app-song-detail [song]="selectedSong"></app-song-detail>
+        </div>
+    </div>
+    <app-reproducer [song]="playedSong"></app-reproducer>
+</div>

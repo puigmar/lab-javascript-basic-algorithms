@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Downloads/confirmation-directive"
+		},
+		{
+			"path": "../../../Downloads/Tweempus_Routes/src/app/shared/author"
+		},
+		{
+			"path": "../../../Downloads/Tweempus_Routes/src/app/shared/author/author-card"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

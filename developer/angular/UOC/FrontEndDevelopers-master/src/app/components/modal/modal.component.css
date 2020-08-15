@@ -1,0 +1,61 @@
+#modal-title{
+    margin-bottom: 20px
+}
+
+#modal-body mat-grid-list{
+    margin: 0 -19px;
+}
+
+#modal-body .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+    padding-bottom: 0
+}
+
+#modal-body .grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+    #modal-body .grid__col{
+        flex-basis: 33.33%;
+        padding: 0 15px;
+    }
+
+    #modal-body .grid.media{
+        font-size: 14px
+    }
+
+    #modal-body .grid.media .grid__col{
+        flex-basis: 50%;
+        padding: 10px 15px;
+    }
+
+    #modal-body .grid__col mat-form-field{
+        display: block;
+    }
+
+    #modal-body .grid.media label{
+        font-size: 19px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #modal-body .grid.media input + button{
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-top: 5px;
+        background-color: #333;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        pointer-events: none;
+    }
+    
+    #modal-body .grid.media input.ng-touched + button{
+        pointer-events: visible;
+    }
+
+    #modal-body .grid.media input + button:hover{
+        background-color: #000;
+    }

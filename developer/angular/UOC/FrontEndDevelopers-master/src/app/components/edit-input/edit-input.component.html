@@ -1,0 +1,9 @@
+<div class="card__songData__form">
+    <div class="card__songData__form__wrap" (click)="onEditField($event)">
+        <span>{{text}}</span>
+        <button type="button" class="card__songData__form__edit"><mat-icon aria-hidden="false" aria-label="edit">edit</mat-icon></button>
+        <button type="button" class="card__songData__form__close" (click)="onCloseField($event)"><mat-icon aria-hidden="false" aria-label="save">close</mat-icon></button>
+        <button type="button" class="card__songData__form__save" (click)="onSaveField($event, field, text)"><mat-icon aria-hidden="false" aria-label="save">save</mat-icon></button>
+        <input type="text" class="card__songData__form__input" matInput value="{{text}}" (keyup)="changeText($event)">
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div>
+  <input type="button" value="+" (click)="addValue($event)" />
+  <input type="text" [(value)]="contador" (keyup)="updateValue($event.target.value)" [(value)]="contador" />
+  <input type="button" value="-" (click)="removeValue($event)" />
+  <input type="button" value="Reset" (click)="resetValue()" />
+</div>

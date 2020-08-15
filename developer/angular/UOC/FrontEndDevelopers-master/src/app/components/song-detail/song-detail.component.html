@@ -1,0 +1,34 @@
+<div class="playList__songs__details" *ngIf="song">
+  <section class="card">
+          <div class="card__picture" [ngStyle]="{ 'background-image': 'url(assets/'+song.picture+')'}"></div>
+          <div class="card__songData">
+            <h4 class="card__songData__album">{{song.album}}</h4>
+            <h3 class="card__songData__title">{{song.title}}</h3>
+            <h5 class="card__songData__author">{{song.author}}</h5>
+            <ul class="card__songData__metadata">
+              <li>
+                <dl>
+                  <dt>Style</dt>
+                  <dd>
+                    <editField [field]="'style'" [text]="song.style" (onEdit)="onEdit($event)" (onSave)="onSave($event)" (onClose)="onCloseEdit($event)"></editField>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>Year</dt>
+                  <dd>
+                    <editField [field]="'year'" [text]="song.year" (onEdit)="onEdit($event)" (onSave)="onSave($event)" (onClose)="onCloseEdit($event)"></editField>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt><input readonly matInput placeholder="Duration" value=""></dt>
+                  <dd>{{song.duration}}</dd>
+                </dl>
+              </li>
+            </ul>
+            <editField [field]="'description'" [text]="song.description" (onEdit)="onEdit($event)" (onSave)="onSave($event)" (onClose)="onCloseEdit($event)"></editField>
+          </div>
+  </section>
+</div>

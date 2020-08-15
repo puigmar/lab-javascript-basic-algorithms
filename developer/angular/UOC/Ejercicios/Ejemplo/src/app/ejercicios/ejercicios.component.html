@@ -1,0 +1,8 @@
+<h1>Lista de ejercicios</h1>
+<ul class="ejercicios">
+  <li [ngClass]="{'selected': ejercicio === ejercicioSeleccionado}" *ngFor="let ejercicio of ejercicios" (click)="onSelectEjercicio(ejercicio)">
+      <span class="badge">{{ejercicio.id}}</span>
+      <span>{{ejercicio.name}}</span>
+  </li>
+</ul>
+<app-details *ngIf="ejercicioSeleccionado" [ejercicio]="ejercicioSeleccionado"></app-details>

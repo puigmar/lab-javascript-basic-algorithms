@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lista-b1993": {
+      "hosting": {
+        "Ejemplo": [
+          "lista-b1993"
+        ]
+      }
+    }
+  }
+}

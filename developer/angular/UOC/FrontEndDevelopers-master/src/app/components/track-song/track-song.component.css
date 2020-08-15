@@ -1,0 +1,46 @@
+.reproducer__track__bar{
+        width: calc (100% - 40px);
+        height: 6px;
+        position: relative;
+        margin: 0 20px;
+    }
+
+        .reproducer__track__bar span{
+            height: 6px;
+            background-color:#fff;
+            display: inline-block;
+            position: relative;
+            top: -8px;
+        }
+
+        .reproducer__track__bar span.init{
+            width: 0%!important;
+        }
+
+
+        .reproducer__track{
+            display: flex;
+            font-size: 16px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .reproducer__track__bar .mat-slider{
+                height: 20px;
+                padding: 0;
+                box-sizing: border-box;
+                width: 100%;
+                transform: translateY(-21px);
+            }
+        
+            .reproducer__track__timePlayed,
+            .reproducer__track__timeDuration{
+                max-width: 55px;
+                display: flex;
+                justify-content: center;
+            }
+
+.mwlResizable {
+    box-sizing: border-box;
+}

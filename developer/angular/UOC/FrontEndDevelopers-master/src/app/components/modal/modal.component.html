@@ -1,0 +1,70 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">Añadir nueva canción</h1>
+    </header>
+    <form enctype="multipart/form-data" [formGroup]="registerForm" (submit)="submit()">
+        <section id="modal-body">
+            <div class="grid">
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Song Title</mat-label>
+                        <input matInput formControlName="title">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Album</mat-label>
+                        <input matInput formControlName="album">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Author</mat-label>
+                        <input matInput formControlName="author">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Description</mat-label>
+                        <input matInput formControlName="description">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Duration</mat-label>
+                        <input matInput formControlName="duration" placeholder="02:00">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Style</mat-label>
+                        <input matInput formControlName="style" placeholder="Rock">
+                    </mat-form-field>
+                </div>
+                <div class="grid__col">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Year</mat-label>
+                        <input matInput formControlName="year">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="grid media">
+                <div class="grid__col">
+                    <label for="fileupload">Cover</label>
+                    <input type="file" formControlName="cover" name="cover" ng2FileSelect [uploader]="uploader" (change)="uploader.uploadAll()"/>
+                </div>
+                <div class="grid__col">
+                    <label for="fileupload">Picture</label>
+                    <input type="file" formControlName="picture" name="picture" ng2FileSelect [uploader]="uploader" (change)="uploader.uploadAll()"/>
+                </div>
+                <div class="grid__col">
+                    <label for="fileupload">Mp3</label>
+                    <input type="file" formControlName="audio_url" name="audio_url" ng2FileSelect [uploader]="uploader" (change)="uploader.uploadAll()" />
+                </div>
+            </div>
+        </section>
+        <footer id="modal-footer">
+            <button type="submit" mat-raised-button id="modal-action-button" (click)="onSaveForm" color="accent">Envíar</button>
+        </footer>
+    </form>
+</div>

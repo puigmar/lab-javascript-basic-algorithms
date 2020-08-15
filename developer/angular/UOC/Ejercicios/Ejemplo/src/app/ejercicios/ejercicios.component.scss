@@ -1,0 +1,47 @@
+.ejercicios {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.ejercicios li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em .3em .3em 2em;
+  border-radius: 4px;
+  display: flex;
+}
+.ejercicios li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.ejercicios li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.ejercicios li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.ejercicios .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  width: 1.5rem;
+  background-color: #405061;
+  line-height: 1em;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  margin-right: 0.8em;
+  padding: 0.5em 0 0;
+  border-radius: 4px 0 0 4px;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+}
